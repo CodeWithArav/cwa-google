@@ -1,0 +1,230 @@
+/* --- Universal Styling --- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Patrick Hand', cursive;
+}
+
+/* --- Main Container Styling --- */
+
+.mainContainer {
+    max-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 60px;
+    background: linear-gradient(rgba(10, 12, 16, 0.9), rgba(10, 12, 16, 0.9)), url(google.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* --- Title Styling --- */
+
+.title {
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.outerBox {
+    width: 440px;
+    height: 135px;
+    background: linear-gradient(to bottom right, #0000ff, #ff0000);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    animation: boxAni 15s linear infinite;
+}
+
+/* --- Title Animation --- */
+
+@keyframes boxAni {
+    0% {
+        transform: perspective(600px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+
+    25% {
+        transform: perspective(600px) rotateX(-5deg) rotateY(5deg) rotateZ(5deg);
+    }
+
+    50% {
+        transform: perspective(600px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+
+    75% {
+        transform: perspective(600px) rotateX(5deg) rotateY(-5deg) rotateZ(-5deg);
+    }
+
+    100% {
+        transform: perspective(600px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+}
+
+.innerBox {
+    width: 410px;
+    height: 105px;
+    background: #0e0e0e;
+    border-radius: 10px;
+    box-shadow: 11px 11px 15px rgba(0, 0, 0, 0.65), -11px -11px 15px rgba(0, 0, 0, 0.65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 50px;
+}
+
+/* --- Title Text Styling --- */
+
+.para::before {
+    content: 'Code ';
+    color: #ff1664;
+    text-shadow: 0px 0px 15px rgba(255, 23, 124, 0.55);
+}
+
+.para {
+    color: #fff;
+    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.55);
+}
+
+.para::after {
+    content: ' Arav';
+    color: #00f2ff;
+    text-shadow: 0px 0px 15px rgba(0, 255, 247, 0.5), 0px 0px 10px rgba(0, 255, 247, 0.5);
+}
+
+/* --- Search Bar Styling --- */
+
+.search-bar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.search-bar form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar input {
+    width: 500px;
+    height: 50px;
+    background: #0e0e0e;
+    outline: none;
+    border: none;
+    font-size: 22px;
+    padding: 0px 20px;
+    border-radius: 10px;
+    color: #fff;
+    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+    border: 2px solid #00f2ff;
+    box-shadow: 0px 0px 10px rgba(0, 255, 247, 0.5);
+    text-decoration: none;
+}
+
+.search-bar button {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background: #0e0e0e;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    border: 2px solid #00f2ff;
+    margin-left: 5px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 255, 247, 0.5);
+}
+
+.input-box {
+    width: 500px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.cross-icon {
+    color: #fff;
+    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+    font-size: 26px;
+    position: absolute;
+    right: 2%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+/* --- Main Grid Styling --- */
+
+.mainGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 8px;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+}
+
+/* --- Website Link Styling --- */
+
+.links {
+    width: 300px;
+    height: 60px;
+    background: #3e3d3d;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    color: #fff;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    font-size: 20px;
+    border: 2px solid #fff;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+}
+
+/* --- Website Link Icon Styling --- */
+
+.icons {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 10px 10px 20px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.clr-red {
+    color: #ff1664;
+    text-shadow: 0px 0px 15px rgba(255, 23, 124, 0.55);
+    border: 2px solid #ff1664;
+    box-shadow: 0px 0px 10px rgba(255, 23, 124, 0.55);
+}
+
+.clr-blue {
+    color: #00f2ff;
+    text-shadow: 0px 0px 15px rgba(0, 255, 247, 0.5);
+    border: 2px solid #00f2ff;
+    box-shadow: 0px 0px 10px rgba(0, 255, 247, 0.5);
+}
